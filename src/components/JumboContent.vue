@@ -16,19 +16,17 @@
             <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
           </button> 
           </div>
-          <!-- <font-awesome-icon icon="fa-solid fa-arrow-right" /> -->
-          
         </div>
     </div>
   </template>
   
   <script>
-  import arrow from '../assets/img/pngfind.com-pointer-icon-png-5910751 (1).png'  
+ 
   
   export default {
   data(){
     return{
-      arrow: arrow
+      
     }
   }
   }
@@ -41,10 +39,6 @@
     .jumbo{
         background-image: url(../assets/img/rev-slider-main-home-img-03.jpg);
         height: 100vh;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
         z-index: -1;
         background-position: center;
         background-size: cover;

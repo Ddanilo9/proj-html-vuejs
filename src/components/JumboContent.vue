@@ -1,7 +1,9 @@
 <template>
     <div class="jumbo">
         <div class="info-box">
-
+          <h1>
+            ciao
+          </h1>
         </div>
     </div>
   </template>

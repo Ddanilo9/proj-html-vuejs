@@ -7,8 +7,8 @@
       <ul class="list-menu d-flex">
         <li class="link-menu"
         v-for="(link, i) in links" :key="i">
-          <a :href="link.href">
-            <img class="arrow" :src="arrow" alt="" width="20px">
+          <a class="d-flex" :href="link.href">
+            <font-awesome-icon icon="fa-solid fa-arrow-right-long " />
             {{link.text}}</a>
         </li>
       </ul>
@@ -22,14 +22,13 @@
 <script>
 import logo from '../assets/img/logo-img-01.png'
 import search from '../assets/img/768px-OOjs_UI_icon_search-ltr.svg.png'
-import arrow from '../assets/img/pngfind.com-pointer-icon-png-5910751 (1).png'
+
 
 export default {
 data(){
   return{
     logo: logo,
     search: search,
-    arrow: arrow,
     links: [
             {
                 text: 'Homes',
@@ -74,7 +73,7 @@ data(){
   .menu{
     .list-menu{
       
-      .arrow{
+      .fa-arrow-right-long{
         display: none;
         color: $hoverText;
       }

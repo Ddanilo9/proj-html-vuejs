@@ -12,7 +12,7 @@
             {{link.text}}</a>
         </li>
       </ul>
-      <img class="search" :src="search" alt="" width="16px" height="16px">
+      <font-awesome-icon icon="fa-solid fa-magnifying-glass" />>
       <font-awesome-icon icon="fa-solid fa-bars" />
     </div>
   </header>
@@ -64,7 +64,7 @@ data(){
 <style scoped lang="scss">
 @import '../styles/variables.scss';
 .header{
-  padding: 30px 56px;
+  padding: 35px 56px;
   justify-content: space-between;
   position: absolute;
         top: 0;
@@ -80,6 +80,8 @@ data(){
       .fa-arrow-right-long{
         display: none;
         color: $hoverText;
+        margin-right: 5px;
+        
       }
       a{
         color: $textColor;
@@ -91,20 +93,27 @@ data(){
 
         &:hover{
           color: $hoverText;
-          .arrow {
+          .fa-arrow-right-long {
             display: inline-block;
         }
         }
       }
     }
-    .search{
+    .fa-magnifying-glass{
       margin-right: 22px;
-      rotate: 90deg;
+      transform: rotate(90deg);
       cursor: pointer;
 
-      // &:hover{
-      //     color: $hoverText;
-      //   }
+      &:hover{
+          color: $hoverText;
+        }
+    }
+    .fa-bars{
+      cursor: pointer;
+
+      &:hover{
+          color: $hoverText;
+        }
     }
   }
   

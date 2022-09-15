@@ -1,25 +1,28 @@
 <template>
     <div class="our-special">
         <div class="container title">
-           <h2>Our Specialties.</h2>
+           <h2 class="serif">Our Specialties<span>.</span></h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="separator"></div>
         </div>
         <div class="container grid-4">
             <div class="card d-flex"
             v-for="(card, index) in links" :key="index">
             <img :src="card.img" alt="">
-            <h4>{{card.titolo}}</h4>
+            <h4 class="serif">{{card.titolo}}</h4>
             <p>{{card.parag}}</p>
             </div>
-        </div> 
+        </div>
+
+
         <div class="container grid-2 ">
             <img :src="imageSlider" alt="">
             <div class="box-card">
                 <div class="card-info">
-                    <h2>Jason Bickford</h2>
-                    <span>Lorem ipsum dolor sit amet.</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis praesentium sequi officiis, provident eum repellendus!</p>
-                    <div>
+                    <h2 class="serif">Jason Bickford</h2>
+                    <span>Founder and executive director.</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                    <div class="socials">
                         <font-awesome-icon icon="fa-brands fa-linkedin" />
                         <font-awesome-icon icon="fa-brands fa-facebook" />
                         <font-awesome-icon icon="fa-brands fa-twitter" />
@@ -44,26 +47,27 @@
         links: [
             {
                 img: svg1,
-                titolo: 'Homes',
-                parag: 'Lorem, ipsum dolor sit amet consectetur adipisicing.'
+                titolo: 'Knowing',
+                parag: 'Lorem ipsum dolor sit amet, quis consect.'
             },
             {
                 img: svg2,
-                titolo: 'Pages',
-                parag: 'Lorem, ipsum dolor sit amet consectetur adipisicing.'
+                titolo: 'Selling',
+                parag: 'Lorem ipsum dolor sit amet, quis consect.'
             },
             {
                 img: svg3,
-                titolo: 'Blog',
-                parag: 'Lorem, ipsum dolor sit amet consectetur adipisicing.'
+                titolo: 'Learning',
+                parag: 'Lorem ipsum dolor sit amet, quis consect.'
             },
             {
                 img: svg4,
-                titolo: 'Shops',
-                parag: 'Lorem, ipsum dolor sit amet consectetur adipisicing.'
+                titolo: 'Contact',
+                parag: 'Lorem ipsum dolor sit amet, quis consect.'
             },
             ],
-        imageSlider: image
+        imageSlider: image,
+
     }
   }
   }
@@ -79,6 +83,29 @@
         text-align: center;
         background-color: white;
         padding-bottom: 50px;
+            h2{
+                font-size: 45px;
+                span{
+                    color: $hoverText;
+                }
+            }
+            p{
+                color: $paragColor;
+                font-size: 22px;
+                font-weight: 300;
+                &::after{
+                    content: "";
+                    display: inherit;
+                    width: 70px;
+                    height: 2px;
+                    background-color: $hoverText;
+                    text-align: center;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    margin-top: 10px;
+                }
+            }
+            
     }
   }
     .grid-4{
@@ -86,26 +113,83 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
+        grid-column-gap: 20px;
         padding-bottom: 120px;
          .card{
             padding: 0 20px;
             flex-direction: column;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                h4{
+                    padding-top: 20px;
+                }
+                p{
+                    text-align: center;
+                    padding-top: 10px;
+                    color: $paragColor;
+                    font-weight: 300;
+                }
             }
         }
        
     .grid-2{
+        margin-top: 70px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+        padding: 0 40px;
+        position: relative;
+        padding-bottom: 70px;
             .box-card{
             display: flex;
             flex-direction: column; 
             justify-content: center;
                 .card-info{
                     background-color: white;
-                    padding: 40px 20px;
+                    padding: 50px 75px;
+                    position: absolute;
+                    bottom: 50%;
+                    transform: translateY(40%);
+                    width: 786px;
+                    left: 40%;
+                        h2{
+                            font-size: 35px;
+                            padding-bottom: 5px;
+                        }
+                        span{
+                            color: $paragColor;
+                            font-weight: 300;
+                            &::after{
+                            content: "";
+                            display: block;
+                            width: 70px;
+                            height: 2px;
+                            background-color: $hoverText;
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                            }
+                        }
+                        p{
+                            color: $paragColor;
+                            font-weight: 300;
+                            font-size: 18px;
+                        }
+                        .socials{
+                            .fa-linkedin,
+                            .fa-facebook,
+                            .fa-twitter{
+                                 color: $hoverText;
+                                 padding: 5px 4px;
+                                 font-size: 20px;
+                                 margin-top: 5px;
+                                 cursor: pointer;
+                            }
+                           
+                            
+                        }
                 }
             } 
     }

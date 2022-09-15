@@ -167,6 +167,8 @@
     margin-top: 40px;
     background-color: $GbGray;
     padding-top: 40px;
+    position: relative;
+    z-index: 10;
         .title-news{
            h2{
             font-size: 45px;

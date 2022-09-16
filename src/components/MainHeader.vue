@@ -5,10 +5,14 @@
     </figure>
     <div class="menu d-flex">
       <ul class="list-menu d-flex">
-        <li class="link-menu"
+        <li @click="activeLink(i)" 
+        :class="'link-menu'"
         v-for="(link, i) in links" :key="i">
-          <a class="d-flex" :href="link.href">
-            <font-awesome-icon icon="fa-solid fa-arrow-right-long " />
+        <a
+        :class="['d-flex', active == i ? 'active' : '']">
+            <font-awesome-icon
+            :class="[active == i ? 'visible' : '']"
+             icon="fa-solid fa-arrow-right-long " />
             {{link.text}}</a>
         </li>
       </ul>
@@ -27,42 +31,50 @@ import search from '../assets/img/768px-OOjs_UI_icon_search-ltr.svg.png'
 export default {
 data(){
   return{
+    active: 0,
     logo: logo,
     search: search,
     links: [
             {
                 text: 'Homes',
-                href: 'homes'
+                href: '#nogo'
             },
             {
                 text: 'Pages',
-                href: 'pages'
+                href: '#nogo'
             },
             {
                 text: 'Blog',
-                href: 'blog'
+                href: '#nogo'
             },
             {
                 text: 'Shops',
-                href: 'shops'
+                href: '#nogo'
             },
             {
                 text: 'Events',
-                href: 'events'
+                href: '#nogo'
             },
             {
                 text: 'Elements',
-                href: 'elements'
+                href: '#nogo'
             },
             ]
   }
-}
+},
+methods: {
+  activeLink(index){
+    this.active = index
+    console.log(this.active)
+  }
+},
 }
 </script>
 
 
 <style scoped lang="scss">
 @import '../styles/variables.scss';
+
 .header{
   padding: 35px 56px;
   justify-content: space-between;
@@ -81,7 +93,7 @@ data(){
         display: none;
         color: $hoverText;
         margin-right: 5px;
-        
+        transition: all 0.3s;
       }
       a{
         color: $textColor;
@@ -90,27 +102,34 @@ data(){
         line-height: 23px;
         font-weight: 600;
         padding: 0 22px;
-
+        transition: all 0.3s;
+        cursor: pointer;
         &:hover{
           color: $hoverText;
+          transition: all 0.3s;
           .fa-arrow-right-long {
+            transition: all 0.3s;
             display: inline-block;
+          }
         }
-        }
+        
+      }
+      .active{
+          color: $hoverText;
       }
     }
     .fa-magnifying-glass{
       margin-right: 22px;
       transform: rotate(90deg);
       cursor: pointer;
-
+      transition: all 0.3s;
       &:hover{
           color: $hoverText;
         }
     }
     .fa-bars{
       cursor: pointer;
-
+      transition: all 0.3s;
       &:hover{
           color: $hoverText;
         }

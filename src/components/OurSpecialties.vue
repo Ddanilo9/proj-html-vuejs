@@ -134,7 +134,7 @@
         }
        
     .grid-2{
-        margin-top: 70px;
+        margin-top: 120px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
@@ -142,7 +142,7 @@
         grid-row-gap: 0px;
         padding: 0 40px;
         position: relative;
-        padding-bottom: 70px;
+        padding-bottom: 120px;
             .box-card{
             display: flex;
             flex-direction: column; 
@@ -153,7 +153,7 @@
                     position: absolute;
                     bottom: 50%;
                     transform: translateY(40%);
-                    width: 786px;
+                    width: 700px;
                     left: 40%;
                         h2{
                             font-size: 35px;

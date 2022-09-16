@@ -96,12 +96,14 @@
         text-transform: uppercase;
         font-weight: 600;
         cursor: pointer;
-        
+        transition: all 0.5s;
           &:hover{
             .fa-minus{
-              display: none;            
+              display: none;   
+              transition: all 0.5s;         
             }
             .fa-arrow-right-long{
+              transition: all 0.5s;
               transform: translateX(-5px);
             }
           }
@@ -111,14 +113,27 @@
         color: white;
        }
     }
-    .arrow-left{
-      transform: translateY(-400px) translateX(-680px) rotate(180deg);
+    .arrow-left{  
+      top: 50%;
+      transform: rotate(180deg);
       cursor: pointer;
-    }
+      position: absolute;
+      left: 40px;
+      transition: all 0.5s;
+      &:hover{
+        left: 35px;
+      }
+      }
     .arrow-right{
-      transform: translateY(300px) translateX(680px) ;
+      top: 50%;
       cursor: pointer;
+      position: absolute;
+      right: 40px;
+      transition: all 0.5s;
+      &:hover{
+        right: 35px;
+      }
     }
-    }
+}
   </style>
   

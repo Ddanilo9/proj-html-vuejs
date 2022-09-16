@@ -29,6 +29,29 @@
             </div>
         </div>
      </div>
+     <div class="container grid-5">
+        <div class="logos">
+            <img class="imgLogo" src="../assets/img/h4-clients-img-04-1.png" alt="">
+            <img class="imgHover" src="../assets/img/h4-clients-img-03.png" alt="">
+        </div>
+        <div class="logos">
+            <img class="imgLogo" src="../assets/img/h4-clients-img-06-1.png" alt="">
+            <img class="imgHover" src="../assets/img/h4-clients-img-05.png" alt="">           
+        </div>
+        <div class="logos">
+            <img class="imgLogo" src="../assets/img/h4-clients-img-08-1.png" alt="">
+            <img class="imgHover" src="../assets/img/h4-clients-img-07.png" alt="">
+        </div>
+        <div class="logos">
+            <img class="imgLogo" src="../assets/img/h4-clients-img-10-1.png" alt="">
+            <img class="imgHover" src="../assets/img/h4-clients-img-09.png" alt="">
+        </div>
+        <div class="logos">
+            
+            <img class="imgLogo" src="../assets/img/h4-clients-img-02.png" alt="">
+            <img class="imgHover" src="../assets/img/h4-clients-img-01.png" alt="">
+        </div>
+     </div>
     </div>
   </template>
   
@@ -46,6 +69,7 @@
   
   <style scoped lang="scss">
   @import '../styles/variables.scss';
+
   .contact-us{
     background-color: $GbGray;
   }
@@ -54,7 +78,7 @@
    padding: 5px 15px;
   }
   .world{
-    background-image: url(http://localhost:8080/img/h1-contact-rev-01.7a0a443b.png);
+    background-image: url(../assets/img/h1-contact-rev-01.png);
     height: 547px;
     background-repeat: no-repeat;
     background-position: center;
@@ -75,6 +99,7 @@
             position: relative;
             left: 84px;
             top: 182px;
+            cursor: pointer;
         }
         .add-2{
             left: 296px;
@@ -154,6 +179,35 @@
             margin-top: 10px;
                 }
     }
+  }
+  .grid-5{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-bottom: 70px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+
+  
+     .logos{
+        position: relative;
+        .imgLogo{
+            cursor: pointer;
+            &:hover{
+                display: none;
+            
+            }
+        }
+            .imgHover{
+                position: absolute;
+                left: 0;
+                cursor: pointer;
+                &:hover{
+                    display: block;
+                    top: 0;
+                    z-index: -1;
+                }
+            }
+     }
   }
   </style>
   

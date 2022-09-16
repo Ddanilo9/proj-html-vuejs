@@ -23,7 +23,10 @@
                         <font-awesome-icon icon="fa-solid fa-location-dot" />
                         <p>{{event.luogo}}</p>
                     </div>
-                    <h4 class="upper">read More</h4>
+                    <h4 class="upper">
+                        <font-awesome-icon class="icon" style="padding-right:5px" icon="fa-solid fa-arrow-right-long" />
+                        <a style="color:black" href="">read More</a>
+                    </h4>
                 </div>
             </div>
         </div>
@@ -73,14 +76,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    display: flex;
         .upcoming-events{
             width: 400px;
             background-color: white;
-            position: absolute;
-            transform: translateY(50%) translateX(50%);
-
+            transform: translateX(45%);
+            align-self: center;
             .title{
-                padding: 10px 20px;
+                padding: 30px 35px;
                 box-shadow: 0px 5px 12px -6px rgb(0 0 0 / 61%);
             }
             .col-25{
@@ -90,12 +93,14 @@
                     padding: 20px;
                     color: white;
                      .info{
+                        display: flex;
                         text-align: center;
                         display: flex;
                         flex-direction: column;
-                        background-color: $hoverText;
-                        padding: 5px;
+                        background-color: #FF4612;
                         transform: translateX(20px);
+                        aspect-ratio: 1/1;
+                        justify-content: center;
                          span{
                             font-size: 14px;
                             font-weight: 400;
@@ -108,10 +113,29 @@
             }
             .col-75{
                 flex-grow: 1;
-                padding: 10px 20px;
+                padding: 30px 25px;
                 box-shadow: 0px 2px 8px -6px rgb(0 0 0 / 61%);
                     h3{
                         padding-bottom: 5px;
+                        cursor: pointer;
+                        &:hover{
+                            color: $hoverText;
+                        }
+                    }
+                    h4{
+                        .icon{
+                            color: $hoverText;
+                            display: none;
+                        }
+                        &:hover{
+                            .icon{
+                            display: inline-block;
+                        }
+                        }
+                        a{
+                            font-size: 13px;
+                            font-weight: 600;
+                        }
                     }
                     .fa-clock,
                     .fa-location-dot{
@@ -121,7 +145,9 @@
                     }
                     p{
                         font-weight: 300;
-                        padding-left: 3px;
+                        padding-left: 5px;
+                        padding-bottom: 6px;
+                        padding-top: 2px;
                     }
                     .upper{
                         padding-top: 5px;

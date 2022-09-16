@@ -14,7 +14,7 @@
      <font-awesome-icon class="arrow-right" icon="fa-solid fa-arrow-right-long" />
      <font-awesome-icon class="arrow-left" icon="fa-solid fa-arrow-right-long" />
      <div class="video">
-
+      <font-awesome-icon class="icon" style="align-self:center" icon="fa-solid fa-play" />
      </div>
     </div>
   </template>
@@ -60,7 +60,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 380px;
+        height: 450px;
         z-index: 10;
         color: white;
          h5{
@@ -72,6 +72,7 @@
             text-align: center;
             font-weight: 300;
             color: rgb(196, 194, 194);
+            padding-bottom: 15px;
          }
          span{
             font-size: 12px;
@@ -97,13 +98,22 @@
     transform: rotate(180deg);
     left: 80px;
     cursor: pointer;
+    transition: all 0.5s;
+    &:hover{
+      left:75px
+    }
   }
+  
   .arrow-left{
    color: white;
     position: absolute;
     top: 15%;
     right: 80px;
     cursor: pointer;
+    transition: all 0.5s;
+    &:hover{
+      transform: translateX(5px);
+    }
   }
  
   .video{
@@ -112,6 +122,17 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    .icon{
+      font-size: 40px;
+      color: white;
+      transition: all 0.5s;
+      cursor: pointer;
+      &:hover{
+         transform: scale(1.1);
+      }
+    }
   }
   </style>
   

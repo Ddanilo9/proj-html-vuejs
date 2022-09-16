@@ -54,106 +54,101 @@
             </div>
         </div>
         <div style="margin-top:70px; background-color: #FF4612" >
-            <p style="text-align:center" >© 2022 Qode Interactive, All Rights Reserved</p>
+            <p style="text-align:center; padding: 5px 0;" >© 2022 Qode Interactive, All Rights Reserved</p>
         </div>
     </footer>
   </template>
   
   <script>
- 
-  
-  export default {
-  data(){
-    return{
-      
-    }
+ export default {
   }
-  }
+
   </script>
   
   
-  <style scoped lang="scss">
+<style scoped lang="scss">
   @import '../styles/variables.scss';
-  .grid-4{
+.grid-4{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 15px;
     grid-row-gap: 0px;
-        .about{
-            .icon{
-                color: white;
-                padding-right: 9px;
-                padding-top: 20px;
-                cursor: pointer;
-                &:hover{
-                    color: #FF4612;
-                }
-            }
-        }
-        .twitter{
-            .icon{
-                align-self: baseline;
-                padding-top: 3px;
+
+    .about{
+        .icon{
+            color: white;
+            padding-right: 9px;
+            padding-top: 20px;
+            cursor: pointer;
+
+            &:hover{
                 color: #FF4612;
-                padding-right: 10px;
-            }
-            p{
-                padding-bottom: 20px;
             }
         }
-        .links-i{
-            li{
-                padding-bottom: 8px;
-            }
+    }
+    .twitter{
+        .icon{
+            align-self: baseline;
+            padding-top: 3px;
+            color: #FF4612;
+            padding-right: 10px;
         }
-        .contact-me{
-            .icon{
-                padding-top: 3px;
-                color: #FF4612;
-                padding-right: 10px;
-                cursor: pointer;
-            }
-            li{
-                padding-bottom: 8px;
-            }
-            input{
-                border: none;
-                margin-top: 30px;
-                background-color: transparent;
-                border-bottom: 1px solid gray;
-                width: 100%;
-            }
-            button{
-                border: none;
-                background: transparent;
-                color: white;
-                bottom: 0;
-                right: 0;
-                cursor: pointer;
-            }
+        p{
+            padding-bottom: 20px;
         }
-        h4{
-            font-size: 19px;
-            &::after{
-            content: "";
-            display: block;
-            width: 40px;
-            height: 2px;
-            background-color: #FF4612;
-            margin: 20px 0;
+    }
+    .links-i{
+        li{
+            padding-bottom: 8px;
         }
+    }
+    .contact-me{
+        .icon{
+            padding-top: 3px;
+            color: #FF4612;
+            padding-right: 10px;
+            cursor: pointer;
         }
-        p ,li, a{
-            color: $paragColor;
-            
+        li{
+            padding-bottom: 8px;
         }
-  }
-  footer{
+        input{
+            border: none;
+            margin-top: 30px;
+            background-color: transparent;
+            border-bottom: 1px solid gray;
+            width: 100%;
+        }
+        button{
+            border: none;
+            background: transparent;
+            color: white;
+            bottom: 0;
+            right: 0;
+            cursor: pointer;
+        }
+    }
+    h4{
+        font-size: 19px;
+
+        &::after{
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: #FF4612;
+        margin: 20px 0;
+        }
+    }
+    p ,li, a{
+        color: $paragColor;
+    }
+}
+footer{
     padding-top: 70px;
     background-color: #181515;
     color: #FFFFFF;
-  }
-    
-  </style>
+}
+</style>
   

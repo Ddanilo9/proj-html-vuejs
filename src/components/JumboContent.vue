@@ -19,7 +19,7 @@
           </div>
         </div>
         <span class="arrow-right">
-        <font-awesome-icon icon=" fa-solid fa-arrow-right-long" />
+          <font-awesome-icon icon=" fa-solid fa-arrow-right-long" />
         </span>
         <span class="arrow-left">
           <font-awesome-icon icon=" fa-solid fa-arrow-right-long" />
@@ -28,75 +28,69 @@
   </template>
   
   <script>
- 
-  
-  export default {
-  data(){
-    return{
-      
-    }
-  }
+export default {
   }
   </script>
   
   
-  <style scoped lang="scss">
+<style scoped lang="scss">
   @import '../styles/variables.scss';
   
-    .jumbo{
-        background-image: url(../assets/img/rev-slider-main-home-img-03.jpg);
-        height: 100vh;
-        z-index: -1;
-        background-position: center;
-        background-size: cover;
-    }
-    .grid{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr;
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
+.jumbo{
+  background-image: url(../assets/img/rev-slider-main-home-img-03.jpg);
+  height: 100vh;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 
     .info-box{
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       transform: translateX(140px) translateY(-45px);
-       .buttons{
-        .fa-minus{
-          transform: rotate(90deg);
-          margin-right: 20px;
-          transition: all 1s;
+        .buttons{
+          .fa-minus{
+            transform: rotate(90deg);
+            margin-right: 20px;
+            transition: all 1s;
+          }
+          span{
+           margin-right: 15px;
+          }
         }
-        span{
-          margin-right: 15px;
-        }
-       }
-       h1{
+        h1{
         font-size: 70px;
         color: $textColor;
-        span{
-          color: $hoverText;
-          margin-left: -15px;
+          span{
+            color: $hoverText;
+            margin-left: -15px;
+          }
         }
-       }
-       p{
-        color: $paragColor;
-        width: 90%;
-        font-weight: 300;
-        font-size: 22px;
-        line-height: 28px;
-       }
-       .more, .purchase{
-        width: 215px;
-        background-color: white;
-        border: none;
-        padding: 20px 30px 20px 30px;
-        margin: 20px 20px 20px 0;
-        text-transform: uppercase;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.5s;
+        p{
+          color: $paragColor;
+          width: 90%;
+          font-weight: 300;
+          font-size: 22px;
+          line-height: 28px;
+        }
+        .more, .purchase{
+          width: 215px;
+          background-color: white;
+          border: none;
+          padding: 20px 30px 20px 30px;
+          margin: 20px 20px 20px 0;
+          text-transform: uppercase;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.5s;
+
           &:hover{
             .fa-minus{
               display: none;   
@@ -107,11 +101,11 @@
               transform: translateX(-5px);
             }
           }
-       }
-       .purchase{
-        background-color: $hoverText;
-        color: white;
-       }
+        }
+        .purchase{
+          background-color: $hoverText;
+          color: white;
+        }
     }
     .arrow-left{  
       top: 50%;
@@ -120,20 +114,22 @@
       position: absolute;
       left: 40px;
       transition: all 0.5s;
+
       &:hover{
         left: 35px;
       }
-      }
+    }
     .arrow-right{
       top: 50%;
       cursor: pointer;
       position: absolute;
       right: 40px;
       transition: all 0.5s;
-      &:hover{
-        right: 35px;
-      }
+
+    &:hover{
+      right: 35px;
     }
+  }
 }
   </style>
   

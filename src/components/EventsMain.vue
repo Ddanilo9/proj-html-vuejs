@@ -34,10 +34,7 @@
   </template>
   
   <script>
-  
-  
-  
-  export default {
+ export default {
   data(){
     return{
         events:[
@@ -66,10 +63,10 @@
   </script>
   
   
-  <style scoped lang="scss">
+<style scoped lang="scss">
   @import '../styles/variables.scss';
   
-  .events-main{
+.events-main{
     background-image: url(../assets/img/h1-img-09.jpg);
     height: 100vh;
     background-position: center;
@@ -77,11 +74,12 @@
     background-repeat: no-repeat;
     position: relative;
     display: flex;
-        .upcoming-events{
-            width: 400px;
-            background-color: white;
-            transform: translateX(45%);
-            align-self: center;
+
+    .upcoming-events{
+        width: 400px;
+        background-color: white;
+        transform: translateX(45%);
+        align-self: center;
             .title{
                 padding: 30px 35px;
                 box-shadow: 0px 5px 12px -6px rgb(0 0 0 / 61%);
@@ -89,48 +87,51 @@
             .col-25{
                 flex-basis: 25%;
                 box-shadow: 0px 2px 8px -6px rgb(0 0 0 / 61%);
-                 .date{
+
+                .date{
                     padding: 20px;
                     color: white;
-                     .info{
-                        display: flex;
-                        text-align: center;
-                        display: flex;
-                        flex-direction: column;
-                        background-color: #FF4612;
-                        transform: translateX(20px);
-                        aspect-ratio: 1/1;
-                        justify-content: center;
-                         span{
+                   
+                    .info{
+                    display: flex;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #FF4612;
+                    transform: translateX(20px);
+                    aspect-ratio: 1/1;
+                    justify-content: center;
+                        span{
                             font-size: 14px;
                             font-weight: 400;
                             display: flex;
                             flex-direction: column;
                             text-align: center;
-                         }
-                     }
-                 }
+                        }
+                    }
+                }
             }
             .col-75{
                 flex-grow: 1;
                 padding: 30px 25px;
                 box-shadow: 0px 2px 8px -6px rgb(0 0 0 / 61%);
-                    h3{
-                        padding-bottom: 5px;
-                        cursor: pointer;
-                        &:hover{
-                            color: $hoverText;
-                        }
+                
+                h3{
+                    padding-bottom: 5px;
+                    cursor: pointer;
+                    &:hover{
+                        color: $hoverText;
                     }
-                    h4{
+                }
+                h4{
+                    .icon{
+                        color: $hoverText;
+                        display: none;
+                    }
+                    &:hover{
                         .icon{
-                            color: $hoverText;
-                            display: none;
-                        }
-                        &:hover{
-                            .icon{
-                            display: inline-block;
-                        }
+                        display: inline-block;
+                    }
                         }
                         a{
                             font-size: 13px;
@@ -139,19 +140,19 @@
                     }
                     .fa-clock,
                     .fa-location-dot{
-                        color: $hoverText;
-                        font-size: 12px;
-                        font-weight: 300;
-                    }
-                    p{
-                        font-weight: 300;
-                        padding-left: 5px;
-                        padding-bottom: 6px;
-                        padding-top: 2px;
-                    }
-                    .upper{
-                        padding-top: 5px;
-                    }
+                    color: $hoverText;
+                    font-size: 12px;
+                    font-weight: 300;
+                }
+                p{
+                    font-weight: 300;
+                    padding-left: 5px;
+                    padding-bottom: 6px;
+                    padding-top: 2px;
+                }
+                .upper{
+                    padding-top: 5px;
+                }
             }
         }
   }

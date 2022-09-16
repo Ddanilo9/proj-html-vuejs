@@ -55,14 +55,10 @@
     </div>
   </template>
   
+
   <script>
-  
-  
-  
   export default {
-  data(){
-    
-  }
+
   }
   </script>
   
@@ -110,15 +106,17 @@
             top: 239px;
         }
   }
-  .form{
+.form{
     padding: 0 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     .form-details{
         display: flex;
-    flex-direction: column;
-    align-items: baseline; 
+        flex-direction: column;
+        align-items: baseline; 
+
         input{
             border: none;
             border-bottom: 1px solid rgb(203, 201, 201);
@@ -142,27 +140,29 @@
             text-transform: uppercase;
             font-weight: 600;
             cursor: pointer;
-                &:hover{
+
+            &:hover{
                 .fa-minus{
                 display: none;            
                 }
-            .fa-arrow-right-long{
-              transform: translateX(0x);
-              margin-left: 5px;
+                .fa-arrow-right-long{
+                transform: translateX(0x);
+                margin-left: 5px;
+                }
             }
-          }
         }
         .fa-minus{
-          transform: rotate(90deg);
-          margin-right: 20px;
-          transition: all 1s;
+            transform: rotate(90deg);
+            margin-right: 20px;
+            transition: all 1s;
         }
     }
     h3{
         font-size: 42px;
         padding-bottom: 10px;
+
         span{
-            color: $hoverText;
+             color: $hoverText;
         }
     }
     p{
@@ -170,6 +170,7 @@
         font-size: 22px;
         font-weight: 300;
         padding-bottom: 25px;
+
         &::after{
             content: "";
             display: block;
@@ -177,37 +178,38 @@
             height: 2px;
             background-color: #FF4612;
             margin-top: 10px;
-                }
+        }
     }
-  }
-  .grid-5{
+}
+
+.grid-5{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     padding-bottom: 70px;
     grid-template-rows: 1fr;
     grid-column-gap: 10px;
 
-  
-     .logos{
-        position: relative;
+    .logos{
+         position: relative;
         .imgLogo{
             cursor: pointer;
+
             &:hover{
                 display: none;
-            
             }
         }
-            .imgHover{
-                position: absolute;
-                left: 0;
-                cursor: pointer;
-                &:hover{
-                    display: block;
-                    top: 0;
-                    z-index: -1;
-                }
+        .imgHover{
+            position: absolute;
+            left: 0;
+            cursor: pointer;
+
+            &:hover{
+                display: block;
+                top: 0;
+                z-index: -1;
             }
-     }
-  }
-  </style>
+        }
+    }
+}
+</style>
   
